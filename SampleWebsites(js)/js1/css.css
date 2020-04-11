@@ -1,0 +1,17 @@
+#container{
+  width: 100%;
+  padding: 1%;
+  margin: 0%;
+  font: normal 28px Monospace, sans-serif;
+  color: #fff;
+  background-color: #353535;
+  text-align: center;
+  font-size: 220%;
+}
+
+.button{
+	background-color:red;
+	padding:20px;
+	border-radius:6px;
+	font-size:32px;
+}   

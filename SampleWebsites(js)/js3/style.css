@@ -1,0 +1,63 @@
+﻿#app{
+margin:0 auto;
+width:900px;
+border:solid 10px black;
+padding: 16px;
+}
+#buttons>button{
+width:200px;
+padding:5px;
+margin:3px;
+}
+#app input{
+width:300px;	
+}
+#app label{
+font-size:18px;
+}
+.obliczenia{
+padding:16px;
+}
+.obliczenia>button{
+width:250px;
+margin-top:4px;
+}
+#reset{
+width:250px;
+margin-top:48px;
+}
+#kwadrat{
+padding:16px;
+}
+#prostokat{
+padding:16px;
+display:none;
+}
+#trojkat{
+padding:16px;
+display:none;
+}
+#rownoleglobok{
+padding:16px;
+display:none;
+}
+#trapez{
+padding:16px;
+display:none;
+}
+#romb{
+padding:16px;
+display:none;
+}
+#szescian{
+padding:16px;
+display:none;
+}
+#kolo{
+padding:16px;
+display:none;
+}
+#kula{
+padding:16px;
+display:none;
+}

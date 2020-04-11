@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+<p>Podaj liczbę kilowatów:<input id="kw"/></p>
+<p><button type="button" onclick="oblicz()">przelicz na konie mechaniczne</button></p>
+</form>
+<div id="wynik"></div>
+
+<script>
+	function oblicz(){
+	var kw=parseFloat(document.getElementById("kw").value);
+	var km=kw/0.736;
+	document.getElementById("wynik").innerHTML=(km);
+	}
+</script>
+<body>
+<html>

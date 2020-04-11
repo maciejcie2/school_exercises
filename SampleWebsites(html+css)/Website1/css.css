@@ -1,0 +1,191 @@
+﻿
+ol{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	font-size:19px;
+	height:2em;
+	z-index:5;
+	line-height:2em;
+	background-color:#3300cc;
+	position:fixed;
+	top:20%;
+	left:0px;
+	width:100%;
+	height:10%;
+	border:solid red;
+}
+ol a
+{
+	display:block;
+	color:black;
+	text-align:center;
+	color:yellow;
+}
+ol > li
+{
+	float:left;
+	background-color:#3300cc;
+	width:20%;
+	height:10%;
+
+	color:white;
+}
+ol > li:first-child
+{
+	margin-left:0;
+}
+ol > li > a:hover
+{
+	color:#cc0033;
+}
+
+ol > li:hover
+{
+	background-color:#3300cc;
+}
+ol > li > ul {
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	display:none;
+}
+ol > li > ul > li > a
+{
+}
+ol > li > ul > li 
+{
+	position:relative;
+	background-color:#3300cc;
+}
+
+ol > li > ul > li:hover 
+{
+	background-color:#3300cc;
+}
+
+ol > li > ul > li:hover a 
+{
+	color:#09C;
+}
+ol > li:hover > ul
+{
+	display:block;
+}
+
+
+#c
+{position:absolute;
+left:0px;
+overflow:auto;
+top:30%;
+width:100%;
+height:70%;
+background-image: url('tloo.png');}
+p {color:white;}
+#formkontakt
+{margin: 40px; 
+padding: 70px;
+}
+body { 
+font: 100% normal Arial, Helvetica, sans-serif; 
+background: #161712;
+}
+form, input, select, textarea {
+margin:0; 
+padding:0; 
+color:#ffffff;
+}
+ 
+div.box {
+margin:0 auto;
+width:500px;
+background:#222222;
+position:absolute;
+top:210px;
+left:1px;
+}
+ div.box h1 { 
+color:#ffffff;
+font-size:18px;
+text-transform:uppercase;
+padding:5px 0 5px 5px;
+border-bottom:1px solid #161712;
+border-top:1px solid #161712; 
+}
+ 
+div.box label {
+width:100%;
+display: block;
+background:#1C1C1C;
+border-top:1px solid #262626;
+border-bottom:1px solid #161712;
+padding:10px 0 10px 0;
+}
+ 
+div.box label span {
+display: block;
+color:#bbbbbb;
+font-size:12px;
+float:left;
+width:100px;
+text-align:right;
+padding:5px 20px 0 0;
+}
+ 
+div.box .wpis {
+padding:10px 10px;
+width:200px;
+background:#262626;
+border-bottom: 1px double #171717;
+border-top: 1px double #171717;
+border-left:1px double #333333;
+border-right:1px double #333333;
+}
+ 
+div.box .wiadomosc {
+padding:7px 7px;
+width:350px;
+background:#262626;
+overflow:hidden;
+height:50px;
+}
+ 
+div.box .button	{
+margin:0 0 5px 0;
+padding:4px 7px;
+background:#CC0000;
+border:0px;
+position: relative;
+top:10px;
+left:282px;
+width:100px;
+border-bottom: 1px double #660000;
+border-top: 1px double #660000;
+border-left:1px double #FF0033;
+border-right:1px double #FF0033;
+}
+form{
+color:white;}
+#stopka
+{width:100%;
+height:15%;
+background-color:#3300cc;
+position:fixed;
+bottom:0px;
+left:0px;
+font-size:24px;
+color:white;
+font-family:Segoe Script;
+text-align:center;}
+
+#baner {
+width:100%;
+height:20%;
+position:fixed;
+background-color:#3300cc;
+left:0px;
+top:0px;
+color:white;
+font-family:Cooper Black;
+text-align:center;}

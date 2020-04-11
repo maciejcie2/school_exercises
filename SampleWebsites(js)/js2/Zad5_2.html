@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+<p>Podaj odlegość w kilometrach:<input id="km"/>km</p>
+<p><button type="button" onclick="oblicz()">przelicz na mile morskie</button></p>
+</form>
+<div id="wynik"></div>
+
+<script>
+	function oblicz(){
+	var km=parseFloat(document.getElementById("km").value);
+	var inm=km/1.852;
+	document.getElementById("wynik").innerHTML=(inm+" INM");
+	}
+</script>
+<body>
+<html>

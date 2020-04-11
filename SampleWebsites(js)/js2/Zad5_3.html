@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+Imię:<input type="text" id="imie"/><br>
+Nazwisko:<input type="text" id="nazwisko"/><br>
+Wiek:<input type="number" id="wiek"/><br>
+<p>Ile lat pozostało do emerytury?</p>
+<button type="button" onclick="oblicz()">oblicz</button>
+</form>
+<div id="wynik"></div>
+
+<script>
+	function oblicz(){
+	var wiek=parseInt(document.getElementById("wiek").value);
+	var imie=document.getElementById("imie").value;
+	var nazwisko=document.getElementById("nazwisko").value;
+	var x=65-wiek;
+	document.getElementById("wynik").innerHTML=(imie+" "+nazwisko+" - do emerytury pozostało lat: "+x);
+	}
+</script>
+<body>
+<html>

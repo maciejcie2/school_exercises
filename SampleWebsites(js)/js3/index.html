@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="app">
+<center>
+<div id="buttons">
+<button type="button" onclick="kwadrat()">KWADRAT</button>
+<button type="button" onclick="prostokat()">PROSTOKĄT</button>
+<button type="button" onclick="trojkat()">TRÓJKĄT RÓWNOBOCZNY</button><br>
+<button type="button" onclick="rownoleglobok()">RÓWNOLEGŁOBOK</button>
+<button type="button" onclick="trapez()">TRAPEZ</button>
+<button type="button" onclick="romb()">ROMB</button><br>
+<button type="button" onclick="szescian()">SZEŚCIAN</button>
+<button type="button" onclick="kolo()">KOŁO</button>
+<button type="button" onclick="kula()">KULA</button>
+</div>
+
+<form>
+<div id="kwadrat">
+	<h2>KWADRAT</h2>
+	<label>Bok</label><br>
+	<input id="kw_bok"/>
+	<div class="obliczenia">
+		<button type="button" onclick="kwPolePow()">POLE POWIERZHNI</button><br>
+		<button type="button" onclick="kwObwod()">OBWÓD</button><br>
+		<button type="button" onclick="kwPrzekatna()">PRZEKĄTNA</button><br>
+		<button type="button" onclick="kwPrzekatnaSl()">PRZEKĄTNA SŁOWNIE</button><br>
+		<button type="button" onclick="kwPromOkrWpis()">PROMIEŃ OKRĘGU WPISANEGO</button><br>
+		<button type="button" onclick="kwPromOkrOpis()">PROMIEŃ OKRĘGU OPISANEGO</button>
+	</div>
+</div>
+
+<div id="prostokat">
+	<h2>PROSTOKĄT</h2>
+	<label>Bok a</label><br>
+	<input id="pr_boka"/><br>
+	<label>Bok b</label><br>
+	<input id="pr_bokb"/>
+	<div class="obliczenia">
+		<button type="button" onclick="prPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="prObwod()">OBWÓD</button><br>
+		<button type="button" onclick="prPrzekatna()">PRZEKĄTNA</button><br>
+		<button type="button" onclick="prPromOkrOpis()">PROMIEŃ OKRĘGU OPISANEGO</button>
+	</div>
+</div>
+<div id="trojkat">
+	<h2>TRÓJKĄT RÓWNOBOCZNY</h2>
+	<label>Bok</label><br>
+	<input id="tr_bok"/>
+	<div class="obliczenia">
+		<button type="button" onclick="trPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="trWysokosc()">WYSOKOŚĆ</button><br>
+		<button type="button" onclick="trObwod()">OBWÓD</button><br>
+		<button type="button" onclick="trPromOkrWpis()">PROMIEŃ OKRĘGU WPISANEGO</button><br>
+		<button type="button" onclick="trPromOkrOpis()">PROMIEŃ OKRĘGU OPISANEGO</button>
+	</div>
+</div>
+<div id="rownoleglobok">
+	<h2>RÓWNOLEGŁOBOK</h2>
+	<label>Bok a</label><br>
+	<input id="rb_boka"/><br>
+	<label>Wysokość padająca na bok a</label><br>
+	<input id="rb_wysa"/><br>
+	<label>Bok b</label><br>
+	<input id="rb_bokb"/>
+	<div class="obliczenia">
+		<button type="button" onclick="rbPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="rbObwod()">OBWÓD</button><br>
+	</div>
+</div>
+<div id="trapez">
+	<h2>TRAPEZ</h2>
+	<label>Podstawa a</label><br>
+	<input id="tz_podsta"/><br>
+	<label>Wysokość</label><br>
+	<input id="tz_wys"/><br>
+	<label>Podstawa b</label><br>
+	<input id="tz_podstb"/>
+	<div class="obliczenia">
+		<button type="button" onclick="tzPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="tzObwod()">OBWÓD</button><br>
+	</div>
+</div>
+<div id="romb">
+	<h2>ROMB</h2>
+	<label>Przekątna e</label><br>
+	<input id="rmb_przeke"/><br>
+	<label>Przekątna f</label><br>
+	<input id="rmb_przekf"/>
+	<div class="obliczenia">
+		<button type="button" onclick="rmbBok()">BOK</button><br>
+		<button type="button" onclick="rmbPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="rmbWysokosc()">WYSOKOŚĆ</button><br>
+		<button type="button" onclick="rmbObwod()">OBWÓD</button><br>
+	</div>
+</div>
+<div id="szescian">
+	<h2>SZEŚCIAN</h2>
+	<label>Krawędź</label><br>
+	<input id="sn_kraw"/>
+	<div class="obliczenia">
+		<button type="button" onclick="snObj()">OBJĘTOŚĆ</button><br>
+		<button type="button" onclick="snPolePowBocz()">POLE POWIERZCHNI BOCZNEJ</button><br>
+		<button type="button" onclick="snPolePowCalk()">POLE POWIERZCHNI CAŁKOWITEJ</button><br>
+		<button type="button" onclick="snSumaKr()">SUMA KRAWĘDZI</button><br>
+		<button type="button" onclick="snPrzekątna()">PRZEKĄTNA</button><br>
+	</div>
+</div>
+<div id="kolo">
+	<h2>KOŁO</h2>
+	<label>Promień</label><br>
+	<input id="ko_prom"/>
+	<div class="obliczenia">
+		<button type="button" onclick="koPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="koObwód()">OBWÓD</button><br>
+	</div>
+	<label>Kąt (wycinka, łuku)</label><br>
+	<input id="ko_kat"/>
+	<div class="obliczenia">
+		<button type="button" onclick="koPoleWyc()">POLE WYCINKA</button><br>
+		<button type="button" onclick="koDlLuku()">DŁUGOŚĆ ŁUKU</button><br>
+	</div>
+</div>
+<div id="kula">
+	<h2>KULA</h2>
+	<label>Promień</label><br>
+	<input id="ku_prom"/>
+	<div class="obliczenia">
+		<button type="button" onclick="kuPolePow()">POLE POWIERZCHNI</button><br>
+		<button type="button" onclick="kuObj()">OBJETOŚĆ</button><br>
+	</div>
+</div>
+
+
+<div id="wynik">
+<label>Wynik</label><br>
+<input id="result" readonly/>
+</div>
+<input type="reset" value="CZYŚĆ FORMULARZ" id="reset"/>
+</form>
+</center>
+</div>
+<h2>Autor: Maciej Cieślak </h2>
+<script>
+function kwadrat(){
+document.getElementById("kwadrat").style.display="block";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function prostokat(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="block";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function trojkat(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="block";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function rownoleglobok(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="block";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function trapez(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="block";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function romb(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="block";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function szescian(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="block";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="none";
+}
+function kolo(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="block";
+document.getElementById("kula").style.display="none";
+}
+function kula(){
+document.getElementById("kwadrat").style.display="none";
+document.getElementById("prostokat").style.display="none";
+document.getElementById("trojkat").style.display="none";
+document.getElementById("rownoleglobok").style.display="none";
+document.getElementById("trapez").style.display="none";
+document.getElementById("romb").style.display="none";
+document.getElementById("szescian").style.display="none";
+document.getElementById("kolo").style.display="none";
+document.getElementById("kula").style.display="block";
+}
+
+function kwPolePow(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=a*a;
+document.getElementById("result").value=res;
+}
+function kwObwod(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=4*a;
+document.getElementById("result").value=res;
+}
+function kwPrzekatna(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=a+"√2";
+document.getElementById("result").value=res;
+}
+function kwPrzekatnaSl(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=a+" pierwiatek("+2+")";
+document.getElementById("result").value=res;
+}
+function kwPromOkrWpis(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=a/2;
+document.getElementById("result").value=res;
+}
+function kwPromOkrOpis(){
+var a = parseFloat(document.getElementById("kw_bok").value);
+var res=a/2+"√"+2;
+document.getElementById("result").value=res;
+}
+
+function prPolePow(){
+var a = parseFloat(document.getElementById("pr_boka").value);
+var b = parseFloat(document.getElementById("pr_bokb").value);
+var res=a*b;
+document.getElementById("result").value=res;
+}
+function prObwod(){
+var a = parseFloat(document.getElementById("pr_boka").value);
+var b = parseFloat(document.getElementById("pr_bokb").value);
+var res=(2*a)+(2*b);
+document.getElementById("result").value=res;
+}
+function prPrzekatna(){
+var a = parseFloat(document.getElementById("pr_boka").value);
+var b = parseFloat(document.getElementById("pr_bokb").value);
+var res=Math.sqrt((a*a)+(b*b));
+document.getElementById("result").value=res;
+}
+function prPromOkrOpis(){
+var a = parseFloat(document.getElementById("pr_boka").value);
+var b = parseFloat(document.getElementById("pr_bokb").value);
+var res=Math.sqrt((a*a)+(b*b))/2;
+document.getElementById("result").value=res;
+}
+
+function trPolePow(){
+var a = parseFloat(document.getElementById("tr_bok").value);
+var res=(a*a)/4+"√3";
+document.getElementById("result").value=res;
+}
+function trWysokosc(){
+var a = parseFloat(document.getElementById("tr_bok").value);
+var res=a/2+"√3";
+document.getElementById("result").value=res;
+}
+function trObwod(){
+var a = parseFloat(document.getElementById("tr_bok").value);
+var res=3*a;
+document.getElementById("result").value=res;
+}
+function trPromOkrWpis(){
+var a = parseFloat(document.getElementById("tr_bok").value);
+var res=(1/3)*(a/2)+"√3";
+document.getElementById("result").value=res;
+}
+function trPromOkrOpis(){
+var a = parseFloat(document.getElementById("tr_bok").value);
+var res=(2/3)*(a/2)+"√3";
+document.getElementById("result").value=res;
+}
+
+function rbPolePow(){
+var a = parseFloat(document.getElementById("rb_boka").value);
+var b = parseFloat(document.getElementById("rb_bokb").value);
+var h = parseFloat(document.getElementById("rb_wysa").value);
+var res=a*h;
+document.getElementById("result").value=res;
+}
+function rbObwod(){
+var a = parseFloat(document.getElementById("rb_boka").value);
+var b = parseFloat(document.getElementById("rb_bokb").value);
+var h = parseFloat(document.getElementById("rb_wysa").value);
+var res=(2*a)+(2*b);
+document.getElementById("result").value=res;
+}
+
+function tzPolePow(){
+var a = parseFloat(document.getElementById("tz_podsta").value);
+var b = parseFloat(document.getElementById("tz_podstb").value);
+var h = parseFloat(document.getElementById("tz_wys").value);
+var res=(a+b)/2*h;
+document.getElementById("result").value=res;
+}
+function tzObwod(){
+var a = parseFloat(document.getElementById("tz_podsta").value);
+var b = parseFloat(document.getElementById("tz_podstb").value);
+var h = parseFloat(document.getElementById("tz_wys").value);
+
+var x=(a-b)/2
+if(x<0)x=x*(-1);
+var c = Math.sqrt((h*h)+(x*x));
+
+var res=a+b+(2*c);
+document.getElementById("result").value=res;
+}
+
+function rmbBok(){
+var a = parseFloat(document.getElementById("rmb_przeke").value);
+var b = parseFloat(document.getElementById("rmb_przekf").value);
+var res=Math.sqrt(((a/2)*(a/2))+((b/2)*(b/2)));
+document.getElementById("result").value=res;
+}
+function rmbPolePow(){
+var a = parseFloat(document.getElementById("rmb_przeke").value);
+var b = parseFloat(document.getElementById("rmb_przekf").value);
+var res=(a*b)/2;
+document.getElementById("result").value=res;
+}
+function rmbWysokosc(){
+var a = parseFloat(document.getElementById("rmb_przeke").value);
+var b = parseFloat(document.getElementById("rmb_przekf").value);
+var pole=(a*b)/2;
+var bok=Math.sqrt(((a/2)*(a/2))+((b/2)*(b/2)));
+var res=pole/bok;
+document.getElementById("result").value=res;
+}
+function rmbObwod(){
+var a = parseFloat(document.getElementById("rmb_przeke").value);
+var b = parseFloat(document.getElementById("rmb_przekf").value);
+var res=4*Math.sqrt(((a/2)*(a/2))+((b/2)*(b/2)));
+document.getElementById("result").value=res;
+}
+
+function snObj(){
+var a = parseFloat(document.getElementById("sn_kraw").value);
+var res=a*a*a;
+document.getElementById("result").value=res;
+}
+function snPolePowBocz(){
+var a = parseFloat(document.getElementById("sn_kraw").value);
+var res=4*a*a;
+document.getElementById("result").value=res;
+}
+function snPolePowCalk(){
+var a = parseFloat(document.getElementById("sn_kraw").value);
+var res=6*a*a;
+document.getElementById("result").value=res;
+}
+function snSumaKr(){
+var a = parseFloat(document.getElementById("sn_kraw").value);
+var res=12*a;
+document.getElementById("result").value=res;
+}
+function snPrzekątna(){
+var a = parseFloat(document.getElementById("sn_kraw").value);
+var res=Math.sqrt((a*a)+(a*a*4));
+document.getElementById("result").value=res;
+}
+
+function koPolePow(){
+var a = parseFloat(document.getElementById("ko_prom").value);
+var res=a*a+"π";
+document.getElementById("result").value=res;
+}
+function koObwód(){
+var a = parseFloat(document.getElementById("ko_prom").value);
+var res=2*a+"π";
+document.getElementById("result").value=res;
+}
+function koPoleWyc(){
+var a = parseFloat(document.getElementById("ko_prom").value);
+var x = parseFloat(document.getElementById("ko_kat").value);
+var res=(x/360)*(a*a)+"π";
+document.getElementById("result").value=res;
+}
+function koDlLuku(){
+var a = parseFloat(document.getElementById("ko_prom").value);
+var x = parseFloat(document.getElementById("ko_kat").value);
+var res=(x/360)*(2*a)+"π";
+document.getElementById("result").value=res;
+}
+
+function kuPolePow(){
+var a = parseFloat(document.getElementById("ku_prom").value);
+var res=4*a*a+"π";
+document.getElementById("result").value=res;
+}
+function kuObj(){
+var a = parseFloat(document.getElementById("ku_prom").value);
+var res=(4/3)*a*a*a+"π";
+document.getElementById("result").value=res;
+}
+</script>
+
+</body>
+</html>

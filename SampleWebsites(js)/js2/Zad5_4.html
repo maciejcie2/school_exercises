@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+Podaj powierzchnię ścian w łazience (łącznie) w metrach kwadratowych:<br>
+<input type="number" id="pow"/><br>
+Podaj wymiary płytki w centymetrach:<br> 
+Szerokość:<input type="number" id="szer"/><br>
+Wysokość:<input type="number" id="wys"/><br>
+<button type="button" onclick="oblicz()">Oblicz liczbę płytek</button>
+</form>
+<div id="wynik"></div>
+
+<script>
+	function oblicz(){
+	var pow=parseInt(document.getElementById("pow").value);
+	var szerokosc=parseInt(document.getElementById("szer").value);
+	var wysokosc=parseInt(document.getElementById("wys").value);
+	var powPlytek=szerokosc*wysokosc;
+	var lPlytek=(pow*10000)/powPlytek;
+	
+	var zaokr=parseInt(lPlytek);
+	if(zaokr<lPlytek)lPlytek=zaokr+1;
+	
+	document.getElementById("wynik").innerHTML=("Liczba potrzebnych płytek: "+lPlytek);
+	}
+</script>
+<body>
+<html>
